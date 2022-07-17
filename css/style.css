@@ -1,0 +1,81 @@
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #222222;
+}
+
+form {
+  width: 400px;
+  border: 2px solid #fefefe;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #fefefe;
+  text-align: center;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  color: #fefefe;
+  margin-top: 25px;
+}
+.form__input {
+  height: 35px;
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-bottom: 1px solid #fefefe;
+  color: #fefefe;
+  outline: none;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  margin-top: 35px;
+  background: #fefefe;
+  color: #222222;
+  cursor: pointer;
+  border: none;
+}
+.password__label {
+  position: relative;
+}
+.password__btn {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  bottom: 5px;
+}
+.password__btn::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  width: 35px;
+  height: 3px;
+  background: #fefefe;
+  transform: rotate(45deg);
+  opacity: 1;
+  transition: 0.3s all ease;
+}
+.password__btn.active::after {
+  opacity: 0;
+}
